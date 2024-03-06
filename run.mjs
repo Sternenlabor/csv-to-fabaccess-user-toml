@@ -33,7 +33,7 @@ async function readCSV(filePath) {
 
 function getGroups(u) {
     let groups = u.Gruppen.split(', ')
-    groups = groups.filter((item) => item !== 'Mitglieder-Infos')
+    groups = groups.filter((item) => item !== 'Mitglieder-Infos' && item !== '')
     return ['User', ...groups]
 }
 
